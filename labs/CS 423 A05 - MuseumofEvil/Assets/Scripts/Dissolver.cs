@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Dissolver : MonoBehaviour
 {
-     public Material dissolveMaterial; // The material with the dissolve shader
+     public Material Unlit_Tutorial_Shader; // The material with the dissolve shader
      public float dissolveSpeed = 0.1f; // Speed of dissolving
      public string playerTag = "Player"; // Tag of the player object
 
@@ -15,7 +15,7 @@ public class Dissolver : MonoBehaviour
      void Start ( )
      {
           objectRenderer = GetComponent<Renderer> ( );
-          dissolvePropertyID = Shader.PropertyToID ( "DissolveAmount" );
+          dissolvePropertyID = Shader.PropertyToID ( "_DissolveCutoff" );
      }
 
      void OnEnable ( )

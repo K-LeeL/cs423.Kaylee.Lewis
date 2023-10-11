@@ -105,4 +105,11 @@ public class PlayerController : MonoBehaviour
 
 	}
 
+	public void TeleportTo ( Vector3 position )
+	{
+		movementController.enabled = false;  // Disable the CharacterController temporarily
+		transform.position = position;       // Set the position directly
+		movementController.enabled = true;   // Re-enable the CharacterController
+	}
+
 }
